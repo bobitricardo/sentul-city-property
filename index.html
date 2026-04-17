@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentul City Property - Kota Mandiri Bernuansa Alam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- KONFIGURASI WARNA SENTUL CITY -->
+    <!-- Anda bisa mengganti kode warna (#...) di bawah ini sesuai dengan warna logo Anda -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sentul-primary': '#1a365d',   /* Warna Utama Logo (Contoh: Biru Navy) */
+                        'sentul-secondary': '#a38a59', /* Warna Kedua Logo (Contoh: Merah Maroon) */
+                        'sentul-accent': '#d97706',    /* Warna Aksen (Emas/Gold untuk kesan mewah) */
+                        'sentul-light': '#f0f9ff'      /* Warna Background Terang */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(26, 54, 93, 0.9) 0%, rgba(26, 54, 93, 0.4) 100%), url('image/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .property-card:hover .img-zoom {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- BAGIAN LOGO -->
+                <div class="flex items-center">
+                    <!-- GANTI "images/logo-sentul.png" dengan lokasi dan nama file logo Anda -->
+                    <img src="image/logo.jpg" alt="Logo Sentul City Property" class="h-14 w-auto object-contain" id="main-logo">
+                </div>
+                <!-- AKHIR BAGIAN LOGO -->
+
+                <div class="hidden md:flex space-x-8 text-sm font-bold text-gray-600">
+                    <a href="#why-sentul" class="hover:text-sentul-primary transition">Mengapa Sentul City</a>
+                    <a href="#fasilitas" class="hover:text-sentul-primary transition">Fasilitas Terpadu</a>
+                    <a href="#projects" class="hover:text-sentul-primary transition">Pilihan Properti</a>
+                </div>
+                <div>
+                    <a href="https://wa.me/628111808171?text=Halo%20saya%20ingin%20info%20lebih%20lanjut%20mengenai%20Sentul%20City." class="bg-sentul-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-sentul-primary/30 hover:bg-sentul-secondary transition flex items-center">
+                        <i class="fab fa-whatsapp mr-2 text-lg text-green-400"></i> Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-overlay min-h-screen flex items-center pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Headline -->
+                <div class="lg:col-span-7 text-white space-y-6">
+                    <div class="inline-block bg-white/10 backdrop-blur border border-white/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-sentul-accent">
+                        Kawasan Mandiri Dataran Tinggi Sentul
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                        Wujudkan Hunian Impian Anda di <span class="gradient-text">Kota Pegunungan Mandiri</span>
+                    </h1>
+                    <p class="text-lg text-gray-200 md:max-w-lg leading-relaxed">
+                        Tingkatkan kualitas hidup Anda. Sentul City menawarkan keseimbangan sempurna antara kemewahan modern, fasilitas perkotaan kelas dunia, dan alam pegunungan yang asri.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <div class="flex items-center space-x-2 bg-sentul-primary/40 backdrop-blur px-4 py-2 rounded-lg border border-white/20">
+                            <i class="fas fa-leaf text-green-400"></i>
+                            <span class="text-sm font-semibold">Udara Bersih (AQI 8)</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-sentul-primary/40 backdrop-blur px-4 py-2 rounded-lg border border-white/20">
+                            <i class="fas fa-building text-sentul-accent"></i>
+                            <span class="text-sm font-semibold">Infrastruktur Bawah Tanah</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-sentul-primary/40 backdrop-blur px-4 py-2 rounded-lg border border-white/20">
+                            <i class="fas fa-map-marked-alt text-blue-400"></i>
+                            <span class="text-sm font-semibold">Akses Langsung Tol</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-sentul-primary/40 backdrop-blur px-4 py-2 rounded-lg border border-white/20">
+                            <i class="fas fa-city text-purple-400"></i>
+                            <span class="text-sm font-semibold">Fasilitas Lengkap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Lead Generation -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-sentul-accent to-sentul-secondary rounded-2xl blur opacity-30"></div>
+                    
+                    <div class="relative bg-white rounded-2xl p-8 shadow-2xl border-t-4 border-sentul-secondary">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold text-sentul-primary">Dapatkan E-Brosur & Promo</h3>
+                            <p class="text-sm text-gray-500 mt-1">Dapatkan penawaran dan harga terbaru untuk proyek Sentul City.</p>
+                        </div>
+                        
+                        <form id="mainLeadForm" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide">Nama Lengkap</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-sentul-primary focus:border-transparent outline-none transition" placeholder="Contoh: Budi Santoso">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide">Nomor WhatsApp</label>
+                                <input type="tel" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-sentul-primary focus:border-transparent outline-none transition" placeholder="0812xxxxxxx">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1 uppercase tracking-wide">Proyek Yang Diminati</label>
+                                <select required class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-sentul-primary focus:border-transparent outline-none transition text-gray-700">
+                                    <option value="" disabled selected>-- Pilih Cluster / Apartemen --</option>
+                                    <option>Cluster Spring Residence (Hunian 1 Lantai)</option>
+                                    <option>Cluster Spring Garden (Hunian 1 dan 2 Lantai)</option>
+                                    <option>Cluster Spring Valley Ext. (Hunian 1 dan 2 Lantai)</option>
+                                    <option>Cluster Centronia (Hunian Premium dengan Rooftop)</option>
+                                    <option>Apartemen Saffron (Apartemen Premium AEON Mall)</option>
+                                    <option>Belum Tahu, Ingin Konsultasi</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-sentul-primary to-sentul-secondary text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-sentul-primary/40 transition transform hover:-translate-y-1 mt-2">
+                                UNDUH E-BROSUR
+                            </button>
+                            <p class="text-[10px] text-center text-gray-400 mt-4"><i class="fas fa-lock mr-1 text-sentul-secondary"></i> Data Anda dijamin kerahasiaannya.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mengapa Memilih Sentul City -->
+    <section id="why-sentul" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sentul-secondary font-bold tracking-widest text-sm uppercase">Keunggulan Kawasan</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-sentul-primary mt-2 mb-6">Mengapa Memilih Sentul City?</h2>
+                <p class="text-gray-600 text-lg">Sentul City bukan sekadar perumahan, melainkan sebuah Kota Pegunungan Mandiri seluas 3100 hektar yang mengintegrasikan alam, infrastruktur kelas satu, dan fasilitas komersial berskala internasional.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Point 1 -->
+                <div class="bg-sentul-light rounded-2xl p-8 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
+                    <div class="w-14 h-14 bg-white text-sentul-primary shadow-sm rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sentul-primary group-hover:text-white transition">
+                        <i class="fas fa-mountain-sun"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-sentul-primary mb-3">Eco-City Masterplan</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Lebih dari 60% lahan didedikasikan untuk ruang terbuka hijau, danau, dan taman tematik. Kualitas udara terjamin bersih.</p>
+                </div>
+                <!-- Point 2 -->
+                <div class="bg-sentul-light rounded-2xl p-8 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
+                    <div class="w-14 h-14 bg-white text-sentul-secondary shadow-sm rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sentul-secondary group-hover:text-white transition">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-sentul-primary mb-3">Akses Terbaik</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Memiliki Exit Tol langsung (Exit Tol Sentul Selatan) dan akses mudah menuju Bogor maupun Jakarta.</p>
+                </div>
+                <!-- Point 3 -->
+                <div class="bg-sentul-light rounded-2xl p-8 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
+                    <div class="w-14 h-14 bg-white text-sentul-accent shadow-sm rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sentul-accent group-hover:text-white transition">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-sentul-primary mb-3">Infrastruktur Bawah Tanah</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Jaringan listrik, fiber optik, dan drainase tertata rapi di bawah tanah. Tanpa tiang listrik yang mengganggu pemandangan.</p>
+                </div>
+                <!-- Point 4 -->
+                <div class="bg-sentul-light rounded-2xl p-8 hover:bg-white hover:shadow-xl transition border border-gray-100 group">
+                    <div class="w-14 h-14 bg-white text-sentul-primary shadow-sm rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:bg-sentul-primary group-hover:text-white transition">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-sentul-primary mb-3">Investasi Meroket</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Pembangunan fasilitas masif seperti AEON Mall membuat capital gain properti di Sentul City naik secara signifikan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas Terpadu -->
+    <section id="fasilitas" class="py-24 bg-sentul-primary text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-sentul-accent font-bold tracking-widest text-sm uppercase">Township Facilities</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mt-2 mb-6">Fasilitas Lengkap Berskala Internasional</h2>
+                    <p class="text-blue-100 mb-8 leading-relaxed">Kawasan komersial, pendidikan, kesehatan, dan rekreasi telah beroperasi penuh. Anda tidak perlu keluar kawasan untuk memenuhi segala kebutuhan gaya hidup.</p>
+                </div>
+                
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="bg-white/10 backdrop-blur border border-white/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:bg-sentul-secondary/50 transition duration-300">
+                            <i class="fas fa-shopping-bag text-3xl text-sentul-accent mb-4"></i>
+                            <h5 class="font-bold">Belanja</h5>
+                            <p class="text-[11px] text-gray-300 mt-1">AEON Mall</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur border border-white/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:bg-sentul-secondary/50 transition duration-300">
+                            <i class="fas fa-couch text-3xl text-sentul-accent mb-4"></i>
+                            <h5 class="font-bold">Furnishing</h5>
+                            <p class="text-[11px] text-gray-300 mt-1">IKEA</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur border border-white/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:bg-sentul-secondary/50 transition duration-300">
+                            <i class="fas fa-hospital text-3xl text-sentul-accent mb-4"></i>
+                            <h5 class="font-bold">Kesehatan</h5>
+                            <p class="text-[11px] text-gray-300 mt-1">RS EMC</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur border border-white/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:bg-sentul-secondary/50 transition duration-300">
+                            <i class="fas fa-graduation-cap text-3xl text-sentul-accent mb-4"></i>
+                            <h5 class="font-bold">Pendidikan</h5>
+                            <p class="text-[11px] text-gray-300 mt-1 leading-tight">Sekolah Pelita Harapan, Sampoerna Academy, BPK Penabur</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur border border-white/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:bg-sentul-secondary/50 transition duration-300">
+                            <i class="fas fa-ticket-alt text-3xl text-sentul-accent mb-4"></i>
+                            <h5 class="font-bold">Theme Park</h5>
+                            <p class="text-[11px] text-gray-300 mt-1">Jungle Land</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur border border-white/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:bg-sentul-secondary/50 transition duration-300">
+                            <i class="fas fa-golf-ball text-3xl text-sentul-accent mb-4"></i>
+                            <h5 class="font-bold">Golf Club</h5>
+                            <p class="text-[11px] text-gray-300 mt-1">Sentul Highland Golf Club</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilihan Properti -->
+    <section id="projects" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sentul-secondary font-bold tracking-widest text-sm uppercase">Our Collection</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-sentul-primary mt-2 mb-4">Pilihan Properti Terbaik</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Dari hunian tapak di atas awan hingga apartemen mewah terintegrasi, temukan properti yang paling sesuai dengan gaya hidup Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Spring Residence -->
+                <div class="property-card bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-sentul-secondary flex flex-col relative">
+                    <div class="absolute top-4 right-4 z-10 bg-sentul-secondary text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-lg">Hot Project</div>
+                    <div class="h-60 overflow-hidden relative bg-gray-200">
+                        <img src="image/SpringResidence.png" alt="Spring Residence" class="img-zoom w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-sentul-primary/90 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-6 text-2xl font-extrabold text-white">Spring Residence</h3>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <p class="text-sm text-gray-500 mb-4 line-clamp-2">Hunian eksklusif di titik tertinggi Sentul (440m mdpl). Menawarkan view Gunung Pancar, desain Modern Tropis, dan Smart Home System.</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <button onclick="scrollToForm('Cluster Spring Residence')" class="bg-sentul-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-sentul-secondary transition w-full text-center">Info Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Spring Garden -->
+                <div class="property-card bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-sentul-primary flex flex-col relative">
+ 		<div class="absolute top-4 right-4 z-10 bg-sentul-secondary text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-lg">9 Thematic Park</div>
+                    <div class="h-60 overflow-hidden relative bg-gray-200">
+                        <img src="image/SpringGarden.jpg" alt="Spring Garden" class="img-zoom w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-sentul-primary/90 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-6 text-2xl font-extrabold text-white">Spring Garden</h3>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <p class="text-sm text-gray-500 mb-4 line-clamp-2">Cluster asri yang dikelilingi oleh lanskap taman tematik yang luas. Sangat cocok untuk keluarga yang mendambakan ketenangan alam.</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <button onclick="scrollToForm('Cluster Spring Garden')" class="bg-sentul-light text-sentul-primary px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-sentul-primary hover:text-white transition w-full text-center border border-sentul-primary/20">Info Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Spring Valley Extension -->
+                <div class="property-card bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-sentul-primary flex flex-col relative">
+		<div class="absolute top-4 right-4 z-10 bg-sentul-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-lg">Scandinavian Design</div>
+                    <div class="h-60 overflow-hidden relative bg-gray-200">
+                        <img src="image/SpringValleyExt.jpg" alt="Spring Valley Ext" class="img-zoom w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-sentul-primary/90 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-6 text-2xl font-extrabold text-white leading-tight">Spring Valley <br><span class="text-lg font-medium">Extension</span></h3>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <p class="text-sm text-gray-500 mb-4 line-clamp-2">Lanjutan dari kesuksesan Spring Valley. Menawarkan hunian dengan nuansa lembah hijau yang sejuk dengan kontur tanah yang dinamis.</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <button onclick="scrollToForm('Cluster Spring Valley Ext.')" class="bg-sentul-light text-sentul-primary px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-sentul-primary hover:text-white transition w-full text-center border border-sentul-primary/20">Info Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Centronia -->
+                <div class="property-card bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-sentul-primary flex flex-col relative">
+                    <div class="absolute top-4 right-4 z-10 bg-sentul-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-lg">Premium Location</div>
+                    <div class="h-60 overflow-hidden relative bg-gray-200">
+                        <img src="image/Centronia.jpg" alt="Centronia" class="img-zoom w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-sentul-primary/90 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-6 text-2xl font-extrabold text-white">Centronia</h3>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <p class="text-sm text-gray-500 mb-4 line-clamp-2">Hunian mewah bergaya modern kontemporer yang terletak strategis di pusat kegiatan Sentul City. Mobilitas tinggi dan prestisius.</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <button onclick="scrollToForm('Cluster Centronia')" class="bg-sentul-light text-sentul-primary px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-sentul-primary hover:text-white transition w-full text-center border border-sentul-primary/20">Info Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Apartemen Saffron -->
+                <div class="property-card bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-sentul-primary flex flex-col lg:col-span-2">
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div class="md:w-1/2 h-60 md:h-auto relative overflow-hidden bg-gray-200">
+                            <div class="absolute top-4 left-4 z-10 bg-sentul-secondary text-white text-[10px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-lg">High-Rise Living</div>
+                            <img src="image/Saffron.jpg" alt="Saffron Apartment" class="img-zoom w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8 md:w-1/2 flex flex-col justify-center bg-sentul-primary text-white">
+                            <h3 class="text-3xl font-extrabold text-white mb-2">Apartemen Saffron</h3>
+                            <p class="text-sm text-blue-200 mb-6">Nikmati gaya hidup urban yang dinamis. Saffron adalah apartemen eksklusif yang terintegrasi langsung dengan AEON Mall Sentul City.</p>
+                            
+                            <button onclick="scrollToForm('Apartemen Saffron')" class="bg-sentul-accent text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:bg-white hover:text-sentul-primary transition transform hover:-translate-y-1 w-max">Info Detail</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t-8 border-sentul-secondary">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <!-- LOGO DI FOOTER (Bisa ganti URL-nya dengan logo yang sama) -->
+            <img src="image/logo.jpg" alt="Logo Footer" class="h-16 w-auto mx-auto mb-6 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition">
+            
+            <p class="mb-4 text-sm">Sentul City Property</p>
+	<p class="mb-4 text-[12px]">Authorized Marketing Partner of Sentul City</p>
+            <p class="text-[10px]">&copy; 2026 Sentul City Property. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        function scrollToForm(projectName) {
+            const formSection = document.getElementById('mainLeadForm');
+            const selectElement = formSection.querySelector('select');
+            
+            if(projectName) {
+                selectElement.value = projectName;
+            }
+            formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            formSection.parentElement.classList.add('ring-4', 'ring-sentul-secondary', 'transition-all', 'duration-500');
+            setTimeout(() => {
+                formSection.parentElement.classList.remove('ring-4', 'ring-sentul-secondary');
+            }, 1500);
+        }
+
+        document.getElementById('mainLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nama = this.querySelector('input[type="text"]').value;
+            const nomorWa = this.querySelector('input[type="tel"]').value;
+            const proyek = this.querySelector('select').value;
+            
+            const nomorTujuan = "628111808171"; // GANTI DENGAN NOMOR WA SALES ANDA
+            const pesan = `Halo Tim Marketing Sentul City Property,%0A%0ASaya tertarik dengan info dari website.%0A*Nama:* ${nama}%0A*No WA:* ${nomorWa}%0A*Proyek Diminati:* ${proyek}%0A%0AMohon info lebih lanjut.`;
+            
+            window.open(`https://api.whatsapp.com/send?phone=${nomorTujuan}&text=${pesan}`, '_blank');
+        });
+    </script>
+</body>
+</html>
