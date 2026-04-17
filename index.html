@@ -403,7 +403,7 @@
             
             const nomorTujuan = "628111808171"; // GANTI DENGAN NOMOR WA SALES ANDA
             const pesan = `Halo Tim Marketing Sentul City Property,%0A%0ASaya tertarik dengan info dari website.%0A*Nama:* ${nama}%0A*No WA:* ${nomorWa}%0A*Proyek Diminati:* ${proyek}%0A%0AMohon info lebih lanjut.`;
-            
+            gtag_report_conversion(waUrl);
             window.open(`https://api.whatsapp.com/send?phone=${nomorTujuan}&text=${pesan}`, '_blank');
         });
     </script>
