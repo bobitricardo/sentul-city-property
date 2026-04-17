@@ -403,9 +403,18 @@
             
             const nomorTujuan = "628111808171"; // GANTI DENGAN NOMOR WA SALES ANDA
             const pesan = `Halo Tim Marketing Sentul City Property,%0A%0ASaya tertarik dengan info dari website.%0A*Nama:* ${nama}%0A*No WA:* ${nomorWa}%0A*Proyek Diminati:* ${proyek}%0A%0AMohon info lebih lanjut.`;
-            gtag_report_conversion(waUrl);
-            window.open(`https://api.whatsapp.com/send?phone=${nomorTujuan}&text=${pesan}`, '_blank');
+            
+            // Definisikan waUrl-nya di sini agar komputer tahu alamatnya
+            const waUrl = `https://api.whatsapp.com/send?phone=${nomorTujuan}&text=${pesan}`;
+
+            // 1. Lapor konversi ke Google (Dikosongkan dalam kurungnya agar tidak error pindah halaman)
+            if (typeof gtag_report_conversion === 'function') {
+                gtag_report_conversion();
+            }
+
+            // 2. Buka WA di tab baru dengan sedikit jeda (300ms) agar laporan Google sempat terkirim
+            setTimeout(function() {
+                window.open(waUrl, '_blank');
+            }, 300);
         });
     </script>
-</body>
-</html>
