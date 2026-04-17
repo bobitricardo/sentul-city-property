@@ -9,6 +9,22 @@
 
       gtag('config', 'AW-18095967271');
     </script>
+	<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18095967271/IUelCMyo8Z0cEKeY6rRD',
+          'value': 1.0,
+          'currency': 'IDR',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentul City Property - Kota Mandiri Bernuansa Alam</title>
@@ -74,7 +90,7 @@
                     <a href="#projects" class="hover:text-sentul-primary transition">Pilihan Properti</a>
                 </div>
                 <div>
-                    <a href="https://wa.me/628111808171?text=Halo%20saya%20ingin%20info%20lebih%20lanjut%20mengenai%20Sentul%20City." class="bg-sentul-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-sentul-primary/30 hover:bg-sentul-secondary transition flex items-center">
+                    <a href="https://wa.me/628111808171?text=Halo%20saya%20ingin%20info%20lebih%20lanjut%20mengenai%20Sentul%20City." onclick="return gtag_report_conversion('https://wa.me/628111808171?text=Halo%20saya%20ingin%20info%20lebih%20lanjut%20mengenai%20Sentul%20City.') class="bg-sentul-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-sentul-primary/30 hover:bg-sentul-secondary transition flex items-center">
                         <i class="fab fa-whatsapp mr-2 text-lg text-green-400"></i> Hubungi Kami
                     </a>
                 </div>
@@ -149,7 +165,7 @@
                                     <option>Belum Tahu, Ingin Konsultasi</option>
                                 </select>
                             </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-sentul-primary to-sentul-secondary text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-sentul-primary/40 transition transform hover:-translate-y-1 mt-2">
+                            <button type="submit" onclick="return gtag_report_conversion();" class="w-full bg-gradient-to-r from-sentul-primary to-sentul-secondary text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-sentul-primary/40 transition transform hover:-translate-y-1 mt-2">
                                 UNDUH E-BROSUR
                             </button>
                             <p class="text-[10px] text-center text-gray-400 mt-4"><i class="fas fa-lock mr-1 text-sentul-secondary"></i> Data Anda dijamin kerahasiaannya.</p>
