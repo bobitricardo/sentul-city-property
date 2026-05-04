@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spring Residence Sentul City | Hunian Sehat dan Terjangkau</title>
-<link rel="icon" href="images/favicon.png?v=2" type="image/png">
+    <title>Spring Residence Sentul City | Hunian Sehat dan Terjangkau di Bogor</title>
+    <link rel="icon" href="images/favicon.png?v=2" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -102,9 +102,37 @@
             align-items: center;
             justify-content: center;
         }
+
+        /* Floating WA Button */
+        .wa-floating {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .wa-floating:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/628111808171" target="_blank" class="wa-floating">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Header Navigation -->
     <nav class="fixed w-full z-50 glass-nav border-b border-gray-100">
@@ -128,8 +156,8 @@
                     </span>
                     
                     <h1 class="text-3xl md:text-5xl font-extrabold mb-6 heading-font leading-tight">
-                        Spring Residence Sentul City — <br>
-                        <span class="text-white italic font-normal">Rumah yang Menjaga Kesehatan Keluarga.</span>
+                        Spring Residence Sentul City, Bogor — <br>
+                        <span class="text-white italic font-normal">Rumah yang Menjaga Kesehatan Keluarga Anda.</span>
                     </h1>
                     
                     <div class="space-y-4 mb-8">
@@ -148,7 +176,7 @@
                 <!-- Foto Hero (Fasad Depan Rumah) -->
                 <div class="relative animate-floating">
                     <div class="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/10 relative">
-                        <img src="images/hero.png" alt="Spring Residence" class="w-full h-auto">
+                        <img src="images/hero.png" alt="Fasad Depan Spring Residence" class="w-full h-auto">
                         
                         <!-- Interaktif Badge on Image -->
                         <a href="#promoLeadFormContainer" class="absolute bottom-0 right-0 left-0 md:left-auto md:m-6 badge-urgent text-white px-6 py-5 md:rounded-2xl shadow-2xl z-20 flex items-center justify-center gap-4 cursor-pointer text-center md:text-left transition-transform hover:scale-105">
@@ -172,7 +200,7 @@
                     <h2 class="text-3xl md:text-4xl font-extrabold heading-font mb-6 text-gray-900 leading-[1.8]">
                         Mengapa Lingkungan Kota <br><span class="highlight-yellow italic font-normal">semakin mengkhawatirkan?</span>
                     </h2>
-                    <p class="text-gray-600 text-lg mb-8 font-medium">Kesehatan keluarga terancam oleh faktor lingkungan yang seringkali diabaikan di perkotaan besar yang padat.</p>
+                    <p class="text-gray-600 text-lg mb-8 font-medium text-justify">Kesehatan keluarga terancam oleh faktor lingkungan yang seringkali diabaikan di perkotaan besar yang padat.</p>
                 </div>
                 <div class="grid gap-6">
                     <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 flex items-start gap-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -180,8 +208,8 @@
                             <i class="fas fa-smog"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Polusi Udara Akut</h4>
-                            <p class="text-sm text-gray-500 font-medium leading-relaxed">Konsentrasi debu di kota besar memicu masalah pernapasan serius pada anak-anak secara jangka panjang.</p>
+                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Udara Kota Makin Mengkhawatirkan</h4>
+                            <p class="text-sm text-gray-500 font-medium leading-relaxed">Konsentrasi debu dan polusi di kota besar memicu masalah pernapasan serius pada anak-anak dan orang dewasa secara jangka panjang.</p>
                         </div>
                     </div>
                     <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 flex items-start gap-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -189,8 +217,8 @@
                             <i class="fas fa-head-side-virus"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Stres & Kelelahan Mental</h4>
-                            <p class="text-sm text-gray-500 font-medium leading-relaxed">Kebisingan tanpa henti menurunkan kualitas hidup dan kesejahteraan mental keluarga.</p>
+                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Tidur Tidak Pernah Nyenyak</h4>
+                            <p class="text-sm text-gray-500 font-medium leading-relaxed">Kebisingan tanpa henti dan polusi suara di kota menurunkan kualitas istirahat dan kesejahteraan mental keluarga.</p>
                         </div>
                     </div>
                     <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-200 flex items-start gap-6 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -198,8 +226,8 @@
                             <i class="fas fa-hourglass-end"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Waktu yang Terbuang</h4>
-                            <p class="text-sm text-gray-500 font-medium leading-relaxed">Berjam-jam terjebak macet setiap harinya adalah waktu berharga yang hilang sia-sia.</p>
+                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Waktu Habis di Perjalanan</h4>
+                            <p class="text-sm text-gray-500 font-medium leading-relaxed">Berjam-jam terjebak macet setiap harinya adalah waktu berharga yang hilang sia-sia di jalan.</p>
                         </div>
                     </div>
                 </div>
@@ -215,7 +243,7 @@
                     Banyak orang <span class="highlight-red font-extrabold">MENGORBANKAN</span> kualitas hidup demi dekat dengan kota.
                 </p>
                 <p class="text-xl md:text-2xl text-gray-700 leading-[1.8] font-medium mb-6">
-                    Spring Residence hadir bukan sebagai alternatif — tapi sebagai <span class="highlight-green font-extrabold">jawaban</span>.
+                    Spring Residence hadir bukan sebagai alternatif — tapi sebagai <span class="highlight-green font-extrabold">JAWABAN</span>.
                 </p>
                 <p class="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium italic text-gray-400">
                     Udara buruk, tidur yang terganggu, dan waktu habis di jalan bukan lagi hal yang harus Anda terima sebagai kewajaran.
@@ -228,21 +256,118 @@
                         <i class="fas fa-lungs"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 heading-font">Udara Sangat Sehat</h3>
-                    <p class="text-gray-600 text-base leading-relaxed font-medium">Di ketinggian 325 mdpl, tersedia udara murni dengan AQI 8 yang membersihkan pernapasan setiap hari.</p>
+                    <p class="text-gray-600 text-base leading-relaxed font-medium">Spring Residence berada di 325 mdpl dengan AQI 8 — Sangat Sehat. Membantu mengurangi keluhan pernapasan dan alergi akibat polusi udara.</p>
                 </div>
                 <div class="bg-blue-50 p-10 rounded-[2.5rem] border border-blue-100 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-lg">
                         <i class="fas fa-moon"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 heading-font">Tidur Lebih Nyenyak</h3>
-                    <p class="text-gray-600 text-base leading-relaxed font-medium">Ketenangan total tanpa bising kota. Suhu alami sejuk memastikan kualitas istirahat maksimal.</p>
+                    <p class="text-gray-600 text-base leading-relaxed font-medium">Ketenangan total tanpa bising kota dan suhu alami yang sejuk memastikan kualitas istirahat maksimal.</p>
                 </div>
                 <div class="bg-amber-50 p-10 rounded-[2.5rem] border border-amber-100 transform transition duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <div class="w-16 h-16 bg-amber-500 text-white rounded-2xl flex items-center justify-center mb-6 text-3xl shadow-lg">
-                        <i class="fas fa-car-side"></i>
+                        <i class="fas fa-clock"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-gray-900 heading-font">Hemat Waktu</h3>
-                    <p class="text-gray-600 text-base leading-relaxed font-medium">Sekolah, RS, hingga mall tersedia di dalam kawasan. Tidak perlu buang waktu 2 jam di jalan.</p>
+                    <p class="text-gray-600 text-base leading-relaxed font-medium">AEON, IKEA, RS EMC, sekolah internasional — semua dalam satu kawasan. Penghuni rata-rata hemat 2 jam setiap hari tanpa keluar kawasan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilihan Tipe Unit Section -->
+    <section id="tipe-unit" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold heading-font mb-4 text-gray-900">Pilihan Tipe Unit</h2>
+                <p class="text-gray-500 font-medium max-w-2xl mx-auto">Tersedia berbagai pilihan tipe hunian modern minimalis yang didesain untuk kenyamanan maksimal keluarga Anda.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Tipe 610 -->
+                <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg border border-gray-100 relative">
+                    <div class="absolute top-6 right-0 bg-[#E63946] text-white px-6 py-2 font-black text-sm uppercase tracking-widest shadow-lg rounded-l-full z-10">
+                        SOLD OUT
+                    </div>
+                    <img src="images/SpringResidence.png" alt="Tipe 610" class="w-full h-64 object-cover filter grayscale" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold heading-font mb-4 text-gray-400">Spring 610</h3>
+                        <div class="space-y-3 text-gray-400 font-medium">
+                            <div class="flex items-center gap-3"><i class="fas fa-expand-arrows-alt"></i> Luas Tanah: 60 m²</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-home"></i> Luas Bangunan: 38 m²</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-bed"></i> 2 Kamar Tidur</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-bath"></i> 1 Kamar Mandi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipe 612 -->
+                <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
+                    <img src="images/SpringResidence.png" alt="Tipe 612" class="w-full h-64 object-cover" onerror="this.src='https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold heading-font mb-4 text-[#1D9E75]">Spring 612</h3>
+                        <div class="space-y-3 text-gray-600 font-medium">
+                            <div class="flex items-center gap-3"><i class="fas fa-expand-arrows-alt text-gray-400"></i> Luas Tanah: 72 m²</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-home text-gray-400"></i> Luas Bangunan: 45 m²</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-bed text-gray-400"></i> 2 Kamar Tidur</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-bath text-gray-400"></i> 1 Kamar Mandi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipe 614 -->
+                <div class="bg-white rounded-[2.5rem] overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
+                    <img src="images/SpringResidence.png" alt="Tipe 614" class="w-full h-64 object-cover" onerror="this.src='https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?auto=format&fit=crop&w=800&q=80'">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold heading-font mb-4 text-[#1D9E75]">Spring 614</h3>
+                        <div class="space-y-3 text-gray-600 font-medium">
+                            <div class="flex items-center gap-3"><i class="fas fa-expand-arrows-alt text-gray-400"></i> Luas Tanah: 84 m²</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-home text-gray-400"></i> Luas Bangunan: 54 m²</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-bed text-gray-400"></i> 2 Kamar Tidur</div>
+                            <div class="flex items-center gap-3"><i class="fas fa-bath text-gray-400"></i> 1 Kamar Mandi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Pilihan Paket Furnishing -->
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100">
+                <div class="mb-10 text-center">
+                    <h3 class="text-2xl font-bold heading-font text-[#0f172a] mb-2 uppercase tracking-wide">Pilihan Paket Furnishing</h3>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Standard -->
+                    <div class="border-r border-gray-100 pr-4 last:border-0">
+                        <h4 class="font-extrabold text-lg heading-font mb-4 text-[#0f172a] border-b-2 border-slate-100 pb-2">Non-Furnished (Standard)</h4>
+                        <ul class="space-y-3 text-xs text-gray-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Spesifikasi Bangunan Standar</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Daya Listrik 2200 Watt</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Instalasi Air Bersih PDAM</li>
+                        </ul>
+                    </div>
+                    <!-- Deluxe -->
+                    <div class="border-r border-gray-100 pr-4 last:border-0">
+                        <h4 class="font-extrabold text-lg heading-font mb-4 text-[#1D9E75] border-b-2 border-[#1D9E75]/10 pb-2">Semi-Furnished (Deluxe)</h4>
+                        <ul class="space-y-3 text-xs text-gray-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-[#1D9E75]"></i> Smart Home System & CCTV</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-[#1D9E75]"></i> Kitchen Set Terpasang</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-[#1D9E75]"></i> Water Heater (10 Lt)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-[#1D9E75]"></i> 3 Unit AC (1 PK & 3/4 PK)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-[#1D9E75]"></i> Canopy Belakang Kaca</li>
+                        </ul>
+                    </div>
+                    <!-- Super Deluxe -->
+                    <div>
+                        <h4 class="font-extrabold text-lg heading-font mb-4 text-amber-500 border-b-2 border-amber-100 pb-2">Fully-Furnished (Super Deluxe)</h4>
+                        <ul class="space-y-3 text-xs text-gray-600 font-medium">
+                            <li class="flex items-center gap-2"><i class="fas fa-star text-amber-500"></i> Semua Benefit Paket Deluxe</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-amber-500"></i> Lemari Pakaian (Wardrobe)</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-amber-500"></i> Sofa, Meja Tamu & Karpet</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-amber-500"></i> Meja Makan & Kursi/Bench</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-plus text-amber-500"></i> Full Interior Wall Decor</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -269,7 +394,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <!-- Promo cards -->
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-[30px] border border-white/20 flex flex-col justify-between group hover:bg-white/20 transition">
                     <div>
                         <div class="w-12 h-12 bg-[#1D9E75] text-white rounded-xl flex items-center justify-center text-xl mb-6 shadow-lg">
@@ -331,24 +455,24 @@
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="bg-gray-50 p-8 rounded-[2.5rem] border-l-8 border-[#1D9E75] text-left">
                     <div class="flex items-center gap-4 mb-6">
-                        <img src="images/dewi.png" alt="Penghuni" class="w-14 h-14 rounded-full object-cover border-2 border-[#1D9E75]">
+                        <img src="images/dewi.png" alt="Penghuni" class="w-14 h-14 rounded-full object-cover border-2 border-[#1D9E75]" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80'">
                         <p class="font-bold text-gray-900">Ibu Dewi S.</p>
                     </div>
                     <p class="text-gray-600 italic font-medium leading-relaxed">"Setelah 6 bulan di Spring Residence, anak jarang sekali sakit. Udaranya benar-benar beda dari Jakarta."</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-[2.5rem] border-l-8 border-[#1D9E75] text-left">
                     <div class="flex items-center gap-4 mb-6">
-                        <img src="images/andi.png" alt="Penghuni" class="w-14 h-14 rounded-full object-cover border-2 border-[#1D9E75]">
+                        <img src="images/andi.png" alt="Penghuni" class="w-14 h-14 rounded-full object-cover border-2 border-[#1D9E75]" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80'">
                         <p class="font-bold text-gray-900">Bapak Andi R.</p>
                     </div>
                     <p class="text-gray-600 italic font-medium leading-relaxed">"Tinggal di Sentul City serasa tinggal di resort. Benar-benar tenang dan jauh dari hiruk pikuk kota."</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-[2.5rem] border-l-8 border-[#1D9E75] text-left">
                     <div class="flex items-center gap-4 mb-6">
-                        <img src="images/hendra.png" alt="Penghuni" class="w-14 h-14 rounded-full object-cover border-2 border-[#1D9E75]">
+                        <img src="images/hendra.png" alt="Penghuni" class="w-14 h-14 rounded-full object-cover border-2 border-[#1D9E75]" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80'">
                         <p class="font-bold text-gray-900">Bapak Hendra W.</p>
                     </div>
-                    <p class="text-gray-600 italic font-medium leading-relaxed">"Saya optimis harga properti di Sentul City akan naik. Tren masyarakat untuk hidup sehat semakin naik, salah satunya adalah dengan tinggal di hunian dengan udara yang bersih dan bebas polusi."</p>
+                    <p class="text-gray-600 italic font-medium leading-relaxed">"Saya optimis harga properti di Sentul City akan naik. Tren masyarakat untuk hidup sehat semakin naik."</p>
                 </div>
             </div>
         </div>
@@ -412,7 +536,7 @@
         </div>
     </footer>
 
-    <!-- Thank You Pop-up Box (Diletakkan di akhir body agar tidak mengganggu crawl Google Ads) -->
+    <!-- Thank You Pop-up Box -->
     <div id="thankYouModal">
         <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl max-w-sm w-full mx-4 text-center">
             <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
