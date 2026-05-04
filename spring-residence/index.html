@@ -586,6 +586,11 @@
             const message = `Halo, saya ${name} (${phone}). Saya tertarik dengan Spring Residence Sentul City. Tujuan konsultasi saya: ${goal}. Mohon info detailnya.`;
             const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
             
+            // Panggil fungsi Google Ads Conversion Tracking SEBELUM membuka WhatsApp
+            if (typeof gtag_report_conversion === 'function') {
+                gtag_report_conversion();
+            }
+            
             // Show modal
             const modal = document.getElementById('thankYouModal');
             modal.style.display = 'flex';
