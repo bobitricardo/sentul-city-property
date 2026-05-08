@@ -173,12 +173,31 @@
                 <div class="flex-shrink-0 flex items-center">
                     <span class="text-xl font-extrabold tracking-tighter text-[#1D9E75] heading-font">SPRING RESIDENCE</span>
                 </div>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#benefit" class="text-[10px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Keunggulan</a>
                     <a href="#tipe-unit" class="text-[10px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Pilihan Tipe Unit</a>
                     <a href="#promo" class="text-[10px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Promo</a>
                     <a href="#testi" class="text-[10px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Kata Penghuni</a>
                 </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-700 hover:text-[#1D9E75] focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-4">
+                <a href="#benefit" onclick="toggleMobileMenu()" class="block text-[11px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Keunggulan</a>
+                <a href="#tipe-unit" onclick="toggleMobileMenu()" class="block text-[11px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Pilihan Tipe Unit</a>
+                <a href="#promo" onclick="toggleMobileMenu()" class="block text-[11px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Promo</a>
+                <a href="#testi" onclick="toggleMobileMenu()" class="block text-[11px] font-extrabold uppercase tracking-widest text-slate-700 hover:text-[#1D9E75] transition-colors">Kata Penghuni</a>
             </div>
         </div>
     </nav>
@@ -193,19 +212,19 @@
                     </span>
                     
                     <h1 class="text-3xl md:text-5xl font-extrabold mb-6 heading-font leading-tight">
-                        Wujudkan <span class="text-[#1D9E75]">Hidup Sehat</span> dan <span class="text-[#1D9E75]">Berkualitas </span> <br>di Rumah 1 Lantai, <span class="text-[#1D9E75]">Cluster Spring Residence</span> <br>Sentul City, <br><span class="text-[#1D9E75]">Hunian Asri Harga Mulai Rp 1 M-an</span>
+                        Wujudkan <span class="text-[#1D9E75]">Hidup Sehat</span> dan <span class="text-[#1D9E75]">Berkualitas</span> <br>dengan Rumah 1 Lantai, <span class="text-[#1D9E75]">Cluster Spring Residence</span> <br>Sentul City, <br><span class="text-[#1D9E75]">Hunian Asri dan Sehat Mulai Rp 1 M-an</span>
                     </h1>
                     
                     <div class="mb-8">
                         <p class="text-base md:text-lg text-gray-100 leading-relaxed font-medium">
-                            Bagi Anda yang sedang cari rumah di Kawasan Sentul City dengan konsep hunian satu lantai yang efisien, Spring Residence hadir sebagai jawaban. Nikmati kemudahan beli rumah di kawasan Sentul City yang sejuk, menjadikannya pilihan perumahan mewah dan sehat di Sentul namun tetap dengan harga yang sangat kompetitif.
+                            Bagi Anda yang sedang cari rumah di Kawasan Sentul City dengan konsep satu lantai yang efisien, Spring Residence hadir sebagai jawaban. Nikmati kemudahan beli rumah di kawasan Sentul City yang sejuk, menjadikannya pilihan perumahan mewah dan sehat di Sentul namun tetap dengan harga rumah yang sangat kompetitif.
                         </p>
                     </div>
                 </div>
 
                 <div class="relative animate-floating">
                     <div class="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white/10 relative">
-                        <img src="images/hero.png" alt="Fasad Depan Spring Residence" class="w-full h-auto">
+                        <img src="images/hero.png" alt="Foto Spring Residence" class="w-full h-auto">
                         
                         <a href="#promoLeadFormContainer" class="absolute bottom-0 right-0 left-0 md:left-auto md:m-6 badge-urgent text-white px-6 py-5 md:rounded-2xl shadow-2xl z-20 flex items-center justify-center gap-4 cursor-pointer text-center md:text-left transition-transform hover:scale-105">
                             <i class="fas fa-fire-alt text-2xl"></i>
@@ -236,7 +255,7 @@
                             <i class="fas fa-smog"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Polusi Udara Akut</h4>
+                            <h4 class="font-bold text-gray-900 mb-2 heading-font text-xl">Udara Kota Makin Mengkhawatirkan</h4>
                             <p class="text-sm text-gray-500 font-medium leading-relaxed">Konsentrasi debu dan polusi di kota besar memicu masalah pernapasan serius pada anak-anak secara jangka panjang.</p>
                         </div>
                     </div>
@@ -570,6 +589,18 @@
     </div>
 
     <script>
+        // Toggle Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            toggleMobileMenu();
+        });
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
         function handleFormSubmit(e) {
             e.preventDefault();
             
